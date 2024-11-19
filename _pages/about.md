@@ -18,7 +18,7 @@ Some recent projects I have been working on include:
 
 Please feel free to reach out to me if you have any questions or would like to discuss any of my work. I am always open to new collaborations and opportunities.
 
-You can find my CV [here](/files/CV_Jens_dHondt.pdf).
+You can find my CV [here](/files/cv_nov22.pdf).
 
 ---
 
