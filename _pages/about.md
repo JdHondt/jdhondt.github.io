@@ -14,15 +14,17 @@ My recent work has focused on the design and implementation of efficient algorit
 Some recent projects I have been working on include:
 - Fast detection of high-order relationships in large databases ([Correlation Detective](https://correlationdetective.com/) library) [[1]](https://www.vldb.org/pvldb/vol15/p1266-papapetrou.pdf), [[2]](https://link.springer.com/article/10.1007/s00778-023-00815-y), [[3]](https://ieeexplore.ieee.org/document/10597715), [[4]](https://pure.tue.nl/ws/portalfiles/portal/199766579/d_Hondt_J..pdf);
 - Efficient similarity search on multivariate data [submission under review];
-- Large-scale evaluations of distance measures for multivariate data [[5]](https://ieeexplore.ieee.org/abstract/document/10555114), [submission under review];
+- Large-scale evaluations of distance measures for multivariate data [[5]](https://ieeexplore.ieee.org/abstract/document/10555114), [[6]](https://dl.acm.org/doi/10.1145/3725258);
 
 Please feel free to reach out to me if you have any questions or would like to discuss any of my work. I am always open to new collaborations and opportunities.
 
-You can find my CV [here](/files/cv_nov22.pdf).
+You can find my CV [here](/files/cv_july25.pdf).
 
 ---
 
 # News
+- **June 23, 2025**: Our paper on the evaluation of multivariate distance measures has been accepted at SIGMOD 2025 in Berlin, Germany. The paper is available [here](https://dl.acm.org/doi/10.1145/3725258).
+- **May 19, 2025**: I will be presenting our work on variable length multivariate time series search at the MulTiSa workshop at the [International Conference on Data Engineering (ICDE)](https://ieee-icde.org/2025/) in Hong Kong.
 - **May 13, 2024**: I will be presenting our work on evaluating multivariate distance measures at the MulTiSa workshop at the [International Conference on Data Engineering (ICDE)](https://icde2024.github.io/) in Utrecht, The Netherlands.
 - **Oct 11, 2023**: Our paper on multivariate correlation analysis under different correlation measures has been accepted at the [VLDB Journal](https://www.springer.com/journal/778). The preprint can be found [here](https://link.springer.com/article/10.1007/s00778-023-00815-y).
 - **Mar 24, 2023**: I will be giving a talk on multivariate correlation analysis at the [Dutch Seminar on Data Systems Design (DSDSD)](https://dsdsd.da.cwi.nl/past_talks/Jens-d-Hondt/) (online).
