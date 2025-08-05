@@ -7,9 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I'm Jens, a PhD candidate in the Databases group at the [Department of Mathematics and Computer Science](https://www.tue.nl/en/our-university/departments/mathematics-and-computer-science) at [TU Eindhoven](https://www.tue.nl/en/).
-My research interests are in the area of scalable data analytics, with a focus on similarity search algorithms on large databases.
-My recent work has focused on the design and implementation of efficient algorithms for extended nearest neighbor search, which involve detection of high-order relationships or search on multivariate data.
+Hi there! I'm Jens, a PhD candidate in the Database group at the [Department of Mathematics and Computer Science](https://www.tue.nl/en/our-university/departments/mathematics-and-computer-science) at [TU Eindhoven](https://www.tue.nl/en/).
+My research interests are in the area of scalable data analytics, with a focus on multivariate similarity search algorithms on large databases.
+My recent work has focused on the design and implementation of efficient algorithms for 
+multivariate similarity search, particularly in the context of high-dimensional data.
+This involves detection of high-order relationships in large databases, as well as the design of efficient algorithms for similarity search on multivariate data.
 
 Some recent projects I have been working on include:
 - Fast detection of high-order relationships in large databases ([Correlation Detective](https://correlationdetective.com/) library) [[1]](https://www.vldb.org/pvldb/vol15/p1266-papapetrou.pdf), [[2]](https://link.springer.com/article/10.1007/s00778-023-00815-y), [[3]](https://ieeexplore.ieee.org/document/10597715), [[4]](https://pure.tue.nl/ws/portalfiles/portal/199766579/d_Hondt_J..pdf);
@@ -18,7 +20,7 @@ Some recent projects I have been working on include:
 
 Please feel free to reach out to me if you have any questions or would like to discuss any of my work. I am always open to new collaborations and opportunities.
 
-You can find my CV [here](/files/cv_july25.pdf).
+You can find my CV [here](/files/amazon25.pdf).
 
 ---
 
