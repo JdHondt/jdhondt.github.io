@@ -20,11 +20,12 @@ Some recent projects I have been working on include:
 
 Please feel free to reach out to me if you have any questions or would like to discuss any of my work. I am always open to new collaborations and opportunities.
 
-You can find my CV [here](/files/amazon25.pdf).
+You can find my CV [here](/files/cv_sep25.pdf).
 
 ---
 
 # News
+- **Sep 3, 2025**: New paper alert! Download the preprint of my paper on synthetic data generation using **generative correlation manifolds** (GCM) [here](/files/gcm_whitepaper.pdf).
 - **June 23, 2025**: Our paper on the evaluation of multivariate distance measures has been accepted at SIGMOD 2025 in Berlin, Germany. The paper is available [here](https://dl.acm.org/doi/10.1145/3725258).
 - **May 19, 2025**: I will be presenting our work on variable length multivariate time series search at the MulTiSa workshop at the [International Conference on Data Engineering (ICDE)](https://ieee-icde.org/2025/) in Hong Kong.
 - **May 13, 2024**: I will be presenting our work on evaluating multivariate distance measures at the MulTiSa workshop at the [International Conference on Data Engineering (ICDE)](https://icde2024.github.io/) in Utrecht, The Netherlands.
