@@ -21,10 +21,10 @@ repository               : "jdhondt/jdhondt.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpeg"
+  avatar           : "meta-portrait-improved-cropped.png"
   name             : "Jens E. d'Hondt"
   pronouns         : # example: "he/him"  
-  bio              : "Data Engineering Researcher"
+  bio              : "AI Researcher"
   location         : "Eindhoven, the Netherlands"
   employer         : "Eindhoven University of Technology"
   uri              : # URL
