@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Jens E. d'Hondt"
+title                    : "Jens E. d'Hondt, PhD"
 title_separator          : "-"
-name                     : &name "Jens E. d'Hondt"
+name                     : &name "Jens E. d'Hondt, PhD"
 description              : &description "personal description"
 url                      : https://jdhondt.github.io 
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -22,13 +22,13 @@ repository               : "jdhondt/jdhondt.github.io"
 author:
   # Biographic information
   avatar           : "meta-portrait-improved-cropped.png"
-  name             : "Jens E. d'Hondt"
+  name             : "Jens E. d'Hondt, PhD"
   pronouns         : # example: "he/him"  
-  bio              : "AI Researcher"
-  location         : "Eindhoven, the Netherlands"
-  employer         : "Eindhoven University of Technology"
+  bio              : "Postdoctoral Scientist"
+  location         : "Barcelona, Spain"
+  employer         : "Barcelona Supercomputing Center"
   uri              : # URL
-  email            : "j.e.d.hondt@tue.nl" 
+  email            : "jens.dhondt@bsc.es" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
