@@ -16,8 +16,8 @@ This involved detection of high-order relationships in large databases, as well 
 Some recent projects I have been working on include:
 - Super-resolution models for upscaling atmospheric simulations using physics-based neural networks and ML-based simulation emulators;
 - Fast detection of high-order relationships in large databases ([Correlation Detective](https://correlationdetective.com/) library) [[1]](https://www.vldb.org/pvldb/vol15/p1266-papapetrou.pdf), [[2]](https://link.springer.com/article/10.1007/s00778-023-00815-y), [[3]](https://ieeexplore.ieee.org/document/10597715), [[4]](https://pure.tue.nl/ws/portalfiles/portal/199766579/d_Hondt_J..pdf);
-- Efficient similarity search on multivariate data [[4]](http://arxiv.org/abs/2512.14723);
-- Large-scale evaluations of distance measures for multivariate data [[5]](https://ieeexplore.ieee.org/abstract/document/10555114), [[6]](https://dl.acm.org/doi/10.1145/3725258);
+- Efficient similarity search on multivariate data [[5]](http://arxiv.org/abs/2512.14723);
+- Large-scale evaluations of distance measures for multivariate data [[6]](https://ieeexplore.ieee.org/abstract/document/10555114), [[7]](https://dl.acm.org/doi/10.1145/3725258);
 
 Please feel free to reach out to me if you have any questions or would like to discuss any of my work. I am always open to new collaborations and opportunities.
 
