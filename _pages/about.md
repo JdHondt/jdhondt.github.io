@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Jens E. d'Hondt, PhD"
+title: "Jens E. d'Hondt"
 author_profile: true
 redirect_from: 
   - /about/
