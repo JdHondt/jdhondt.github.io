@@ -7,17 +7,17 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I'm Jens, a Postdoctoral Scientist at the [Barcelona Supercomputing Center](https://www.bsc.es/). I recently graduated with a PhD from the Database group at the [Department of Mathematics and Computer Science](https://www.tue.nl/en/our-university/departments/mathematics-and-computer-science) at [TU Eindhoven](https://www.tue.nl/en/).
+Hi there! I'm Jens, a Postdoctoral Scientist at the [Barcelona Supercomputing Center](https://www.bsc.es/). In 2025, I defended my PhD thesis on "Efficient Algorithms for Multivariate Similarity Search" at [TU Eindhoven](https://www.tue.nl/en/), where I was part of the Data & AI cluster at the [Department of Mathematics and Computer Science](https://www.tue.nl/en/our-university/departments/mathematics-and-computer-science).
 
-My research interests are twofold. Currently, I am working on super-resolution models for upscaling atmospheric simulations, with a focus on physics-based neural networks and ML-based simulation emulators.
-Previously, my doctoral work focused on the design and implementation of efficient algorithms for multivariate similarity search, particularly in the context of high-dimensional data.
+My research interests are twofold. Currently, I am working on super-resolution models for downscaling atmospheric simulations, with a focus on **probabilistic models with physics-based constraints**.
+In the past, I have worked on the design and implementation of efficient algorithms for multivariate similarity search, particularly in the context of high-dimensional data (i.e., **vector search**).
 This involved detection of high-order relationships in large databases, as well as the design of efficient algorithms for similarity search on multivariate data.
 
 Some recent projects I have been working on include:
-- Super-resolution models for upscaling atmospheric simulations using physics-based neural networks and ML-based simulation emulators;
-- Fast detection of high-order relationships in large databases ([Correlation Detective](https://correlationdetective.com/) library) [[1]](https://www.vldb.org/pvldb/vol15/p1266-papapetrou.pdf), [[2]](https://link.springer.com/article/10.1007/s00778-023-00815-y), [[3]](https://ieeexplore.ieee.org/document/10597715), [[4]](https://pure.tue.nl/ws/portalfiles/portal/199766579/d_Hondt_J..pdf);
-- Efficient similarity search on multivariate data [[5]](http://arxiv.org/abs/2512.14723);
-- Large-scale evaluations of distance measures for multivariate data [[6]](https://ieeexplore.ieee.org/abstract/document/10555114), [[7]](https://dl.acm.org/doi/10.1145/3725258);
+- Super-resolution models for upscaling atmospheric simulations using physics-based neural networks and ML-based simulation emulators [[1]](https://meetingorganizer.copernicus.org/EGU26/EGU26-9829.html).
+- Fast detection of high-order relationships in large databases ([Correlation Detective](https://correlationdetective.com/) library) [[2]](https://www.vldb.org/pvldb/vol15/p1266-papapetrou.pdf), [[3]](https://link.springer.com/article/10.1007/s00778-023-00815-y), [[4]](https://ieeexplore.ieee.org/document/10597715), [[5]](https://pure.tue.nl/ws/portalfiles/portal/199766579/d_Hondt_J..pdf);
+- Efficient similarity search on multivariate data [[6]](http://arxiv.org/abs/2512.14723);
+- Large-scale evaluations of distance measures for multivariate data [[7]](https://ieeexplore.ieee.org/abstract/document/10555114), [[8]](https://dl.acm.org/doi/10.1145/3725258);
 
 Please feel free to reach out to me if you have any questions or would like to discuss any of my work. I am always open to new collaborations and opportunities.
 
@@ -26,7 +26,9 @@ You can find my CV [here](/files/postdoc25.pdf).
 ---
 
 # News
+- **Mar 20, 2026**: My paper on physics-based super-resolution models for downscaling atmospheric simulations has been accepted at EGU 2026 in Vienna, Austria. The preprint can be found [here](https://meetingorganizer.copernicus.org/EGU26/EGU26-9829.html).
 - **Dec 16, 2025**: I successfully defended my PhD thesis at TU Eindhoven!
+- **Dec 1, 2025**: I have joined the Barcelona Supercomputing Center as a Postdoctoral Scientist in the [Earth Sciences Department](https://www.bsc.es/earth-sciences-department).
 - **Sep 16, 2025**: Our paper on **MS-Index**, a novel algorithm for subsequence similarity search on multivariate time series, has been accepted at VLDB 2026 in Boston, USA. The preprint can be found [here](http://arxiv.org/abs/2512.14723).
 - **Sep 3, 2025**: New paper alert! Download the preprint of my paper on synthetic data generation using generative correlation manifolds (**GCM**) [here](https://arxiv.org/abs/2510.21610).
 - **June 23, 2025**: Our paper on the evaluation of multivariate distance measures has been accepted at SIGMOD 2025 in Berlin, Germany. The paper is available [here](https://dl.acm.org/doi/10.1145/3725258).
