@@ -1,0 +1,18 @@
+---
+title: "Physics-Constrained Deep Learning for Downscaling Atmospheric Chemistry Simulations: The Role of Auxiliary Forcings and Model Architecture"
+collection: publications
+category: conferences
+permalink: /publication/egu_2026
+excerpt: ''
+date: 2026-03-14
+venue: 'EGU General Assembly 2026'
+paperurl: 'https://meetingorganizer.copernicus.org/EGU26/EGU26-9829.html'
+---
+
+Chemical transport models (CTMs) are essential for assessing air quality and designing mitigation strategies, yet computational constraints typically limit their operational output to coarse resolutions (e.g., 10-15 km over regional domains). These resolutions are often insufficient to capture local pollution hotspots or neighborhood-scale variations required for accurate exposure assessment. In the frame of the Copernicus Atmospheric Monitoring Service (CAMS) National Collaboration Programme (NCP) contract and AIRE SPanish national project, we are investigating the application of deep learning-based super-resolution techniques to downscale atmospheric composition fields while enforcing physical constraints such as mass conservation.
+
+Our research utilizes a large-scale dataset spanning three years (2021-2023) with hourly outputs covering the Iberian Peninsula. We employ the MONARCH chemical transport model to generate 72,000 paired samples, consisting of high-resolution (5 km) ground truth and synthetically coarsened (10 km) inputs for pollutants including NO2, O3, PM10, and PM2.5, alongside high-resolution meteorological fields and anthropogenic emissions (obtained with the HERMES emission module) as auxiliary inputs. We compare the performance of several architectures adapted from computer vision, specifically Convolutional Neural Networks (CNN), Residual Channel Attention Networks (RCAN), and Enhanced Deep Residual Networks (EDSR). A key methodological innovation in our approach is the integration of high-resolution auxiliary data directly into the learning process to guide the reconstruction of pollutant fields. Additionally, we explore architectural modifications such as renormalization layers to enforce hard physical constraints, including mass conservation and non-negativity.
+
+Our results demonstrate that deep learning models significantly outperform traditional deterministic baselines. A primary finding is that the inclusion of high-resolution ancillary data is critical for performance, providing the necessary physical context to recover sharp spatial gradients. We observe that relatively compact models are capable of achieving impressive fidelity; we report Pearson correlation coefficients exceeding 0.988 and normalized Root Mean Square Error (nRMSE) below 20% across all target pollutants. Qualitative inspection confirms these quantitative gains, as the generated high-resolution maps are nearly indistinguishable from the ground-truth simulation fields. However, we also find that increasing model depth introduces training stability challenges, such as gradient explosions, which require careful optimization strategies.
+
+Current efforts are now focused on reducing temporal biases and improving the robustness of the models across different atmospheric perturbations. Future work will extend this framework to higher scaling factors (i.e., downscaling to 2.5 km resolution) and transition from learning on synthetically degraded data to mapping native low-resolution simulation outputs directly to high-resolution targets. The latter is not trivial, as CTMs are not spatially consistent across resolutions due to information loss during the coarsening process. Finally, we aim to explore spatiotemporal architectures to leverage the temporal coherence inherent in atmospheric transport processes.
