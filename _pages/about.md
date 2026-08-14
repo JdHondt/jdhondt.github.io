@@ -14,7 +14,7 @@ In the past, I have worked on the design and implementation of efficient algorit
 This involved detection of high-order relationships in large databases, as well as the design of efficient algorithms for similarity search on multivariate data.
 
 Some recent projects I have been working on include:
-- Super-resolution models for upscaling atmospheric simulations using physics-based neural networks and ML-based simulation emulators [[1]](https://meetingorganizer.copernicus.org/EGU26/EGU26-9829.html).
+- Super-resolution models for downscaling atmospheric simulations using physics-based neural networks and ML-based simulation emulators [[1]](https://www.researchsquare.com/article/rs-10627504/v1), also presented at [EGU 2026](https://meetingorganizer.copernicus.org/EGU26/EGU26-9829.html).
 - Fast detection of high-order relationships in large databases ([Correlation Detective](https://correlationdetective.com/) library) [[2]](https://www.vldb.org/pvldb/vol15/p1266-papapetrou.pdf), [[3]](https://link.springer.com/article/10.1007/s00778-023-00815-y), [[4]](https://ieeexplore.ieee.org/document/10597715), [[5]](https://pure.tue.nl/ws/portalfiles/portal/199766579/d_Hondt_J..pdf);
 - Efficient similarity search on multivariate data [[6]](http://arxiv.org/abs/2512.14723);
 - Large-scale evaluations of distance measures for multivariate data [[7]](https://ieeexplore.ieee.org/abstract/document/10555114), [[8]](https://dl.acm.org/doi/10.1145/3725258);
@@ -26,6 +26,7 @@ You can find my CV [here](/files/postdoc25.pdf).
 ---
 
 # News
+- **Aug 7, 2026**: New preprint alert! My paper "Neural downscaling of air-quality simulations requires structural correction before spatial refinement" is now available as a preprint and is currently under review at Nature Communications. Read it [here](https://www.researchsquare.com/article/rs-10627504/v1).
 - **Mar 20, 2026**: My paper on physics-based super-resolution models for downscaling atmospheric simulations has been accepted at EGU 2026 in Vienna, Austria. The preprint can be found [here](https://meetingorganizer.copernicus.org/EGU26/EGU26-9829.html).
 - **Dec 16, 2025**: I successfully defended my PhD thesis at TU Eindhoven!
 - **Dec 1, 2025**: I have joined the Barcelona Supercomputing Center as a Postdoctoral Scientist in the [Earth Sciences Department](https://www.bsc.es/earth-sciences-department).
