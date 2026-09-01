@@ -3,7 +3,7 @@ title: "A Structured Study of Multivariate Time-Series Distance Measures"
 collection: publications
 category: conferences
 permalink: /publication/sigmod_2025
-excerpt: ''
+excerpt: 'SIGMOD 2025 paper presenting the most complete evaluation of multivariate time-series distance measures to date: 30 measures across 8 categories, 13 normalizations, 30 datasets, and 3 downstream tasks with rigorous statistical analysis.'
 date: 2025-06-23
 venue: 'SIGMOD'
 paperurl: 'https://dl.acm.org/doi/10.1145/3725258'

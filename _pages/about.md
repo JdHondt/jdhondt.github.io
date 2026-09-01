@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Jens E. d'Hondt"
+excerpt: "Jens E. d'Hondt is a Postdoctoral Scientist at the Barcelona Supercomputing Center working on ML-based downscaling of atmospheric simulations. He holds a PhD from TU Eindhoven on efficient algorithms for multivariate similarity search, with publications at VLDB, SIGMOD, and ICDE."
 author_profile: true
 redirect_from: 
   - /about/
@@ -25,7 +26,7 @@ You can find my CV [here](/files/postdoc25.pdf).
 
 ---
 
-# News
+## News
 - **Aug 7, 2026**: New preprint alert! My paper "Neural downscaling of air-quality simulations requires structural correction before spatial refinement" is now available as a preprint and is currently under review at Nature Communications. Read it [here](https://www.researchsquare.com/article/rs-10627504/v1).
 - **Mar 20, 2026**: My paper on physics-based super-resolution models for downscaling atmospheric simulations has been accepted at EGU 2026 in Vienna, Austria. The preprint can be found [here](https://meetingorganizer.copernicus.org/EGU26/EGU26-9829.html).
 - **Dec 16, 2025**: I successfully defended my PhD thesis at TU Eindhoven!

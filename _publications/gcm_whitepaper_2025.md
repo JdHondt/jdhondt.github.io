@@ -3,7 +3,7 @@ title: "Generative Correlation Manifolds: Generating Synthetic Data with Preserv
 collection: publications
 category: conferences
 permalink: /publication/gcm_whitepaper_2025
-excerpt: ''
+excerpt: 'White paper introducing Generative Correlation Manifolds (GCM), a computationally efficient synthetic data generation method that provably preserves the full correlation structure of a source dataset, from pairwise to higher-order interactions.'
 date: 2025-09-03
 venue: 'Arxiv'
 paperurl: '/files/gcm_whitepaper.pdf'

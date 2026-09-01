@@ -6,7 +6,10 @@
 {% endif %}
 {% assign seo_url = seo_url | default: site.github.url %}
 
-{% if page.title %}
+{% if page.url == "/" %}
+  {% comment %} Homepage: page.title is the author's name, so "title - site.title" would duplicate it. {% endcomment %}
+  {% assign seo_title = site.title | append: " " | append: site.title_separator | append: " " | append: site.author.bio | append: ", " | append: site.author.employer %}
+{% elsif page.title %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
 {% endif %}
 
@@ -14,15 +17,14 @@
   {% assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once %}
 {% endif %}
 
-{% if site.url %}
-  {% assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url %}
-{% endif %}
+{% assign canonical_url = page.url | replace: "index.html", "" | prepend: seo_url %}
 
 <title>{{ seo_title | default: site.title }}{% if paginator %}{% unless paginator.page == 1 %} {{ site.title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 
 {% assign seo_description = page.description | default: page.excerpt | default: site.description %}
 {% if seo_description %}
-  {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
+  {% assign seo_description_plain = seo_description | markdownify | strip_html | strip_newlines | strip %}
+  {% assign seo_description = seo_description_plain | escape_once %}
 {% endif %}
 
 {% assign seo_author = page.author | default: page.author[0] | default: site.author[0] %}
@@ -44,12 +46,17 @@
 <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
 
 {% if seo_url %}
-  <link rel="canonical" href="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
-  <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta property="og:url" content="{{ canonical_url }}">
 {% endif %}
 
-{% if page.excerpt %}
-  <meta property="og:description" name="description" content="{{ seo_description }}">
+{% if page.noindex %}
+  <meta name="robots" content="noindex">
+{% endif %}
+
+{% if seo_description %}
+  <meta name="description" content="{{ seo_description }}">
+  <meta property="og:description" content="{{ seo_description }}">
 {% endif %}
 
 {% if site.twitter.username %}
@@ -87,11 +94,15 @@
   <meta property="og:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
 {% elsif page.header.overlay_image %}
   <meta property="og:image" content="{% if page.header.overlay_image contains "://" %}{{ page.header.overlay_image }}{% else %}{{ page.header.overlay_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
+{% elsif site.og_image %}
+  <meta property="og:image" content="{{ site.og_image | prepend: "/images/" | prepend: base_path }}">
 {% endif %}
 
 {% if page.date %}
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% else %}
+  <meta property="og:type" content="website">
 {% endif %}
 
 {% if paginator.previous_page %}
@@ -101,25 +112,50 @@
   <link rel="next" href="{{ paginator.next_page_path | prepend: seo_url }}">
 {% endif %}
 
-{% if site.og_image %}
+{% if site.social %}
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "url": {{ seo_url | jsonify }},
-      "logo": {{ site.og_image | prepend: "/images/" | prepend: base_path | jsonify }}
+      "@context" : "https://schema.org",
+      "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
+      "name" : {{ site.social.name | default: site.name | jsonify }},
+      "givenName" : "Jens",
+      "familyName" : "d'Hondt",
+      "honorificSuffix" : "PhD",
+      "jobTitle" : {{ site.author.bio | jsonify }},
+      "worksFor" : {
+        "@type" : "Organization",
+        "name" : {{ site.author.employer | jsonify }},
+        "url" : "https://www.bsc.es/"
+      },
+      "alumniOf" : {
+        "@type" : "CollegeOrUniversity",
+        "name" : "Eindhoven University of Technology",
+        "url" : "https://www.tue.nl/en/"
+      },
+      "email" : "mailto:{{ site.author.email }}",
+      "image" : {{ site.author.avatar | prepend: "/images/" | prepend: base_path | jsonify }},
+      "url" : {{ seo_url | jsonify }},
+      "sameAs" : {{ site.social.links | jsonify }}
     }
   </script>
 {% endif %}
 
-{% if site.social %}
+{% if page.collection == "publications" %}
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
-      "name" : "{{ site.social.name | default: site.name }}",
-      "url" : {{ seo_url | jsonify }},
-      "sameAs" : {{ site.social.links | jsonify }}
+      "@context" : "https://schema.org",
+      "@type" : "ScholarlyArticle",
+      "headline" : {{ page.title | jsonify }},
+      "author" : {
+        "@type" : "Person",
+        "name" : {{ site.author.name | jsonify }},
+        "url" : {{ seo_url | jsonify }}
+      },
+      {% if page.date %}"datePublished" : {{ page.date | date_to_xmlschema | jsonify }},{% endif %}
+      {% if page.venue %}"isPartOf" : { "@type" : "Periodical", "name" : {{ page.venue | jsonify }} },{% endif %}
+      {% if page.paperurl %}"sameAs" : {{ page.paperurl | jsonify }},{% endif %}
+      {% if seo_description_plain %}"description" : {{ seo_description_plain | jsonify }},{% endif %}
+      "url" : {{ canonical_url | jsonify }}
     }
   </script>
 {% endif %}

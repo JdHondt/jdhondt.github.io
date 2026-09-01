@@ -3,7 +3,7 @@ title: "Neural downscaling of air-quality simulations requires structural correc
 collection: publications
 category: conferences
 permalink: /publication/naturecomms_2026
-excerpt: ''
+excerpt: 'Preprint (under review at Nature Communications) showing that resolution-dependent model divergence, not missing spatial detail, dominates neural air-quality downscaling error — motivating structural correction before spatial refinement.'
 date: 2026-08-07
 venue: 'Research Square (preprint), under review at Nature Communications'
 paperurl: 'https://www.researchsquare.com/article/rs-10627504/v1'

@@ -3,12 +3,12 @@ title: "Multivariate correlations discovery in static and streaming data"
 collection: publications
 category: conferences
 permalink: /publication/cd_conf_2022
-excerpt: ''
+excerpt: 'VLDB 2022 paper introducing efficient algorithms (Correlation Detective) for discovering strong multivariate correlations in static and streaming data, outperforming the state-of-the-art typically by an order of magnitude.'
 date: 2022-02-01
 venue: 'VLDB'
 slidesurl: 'https://github.com/user-attachments/files/17813764/vldb22_10min.pptx'
 paperurl: 'https://dl.acm.org/doi/abs/10.14778/3514061.3514072'
-citation: #'Koen Minartz, Jens E. d`Hondt, and Odysseas Papapetrou. 2022. Multivariate correlations discovery in static and streaming data. Proc. VLDB Endow. 15, 6 (February 2022), 1266–1278.'
+citation: "Koen Minartz, Jens E. d'Hondt, and Odysseas Papapetrou. 2022. Multivariate correlations discovery in static and streaming data. Proc. VLDB Endow. 15, 6 (February 2022), 1266–1278."
 ---
 
 

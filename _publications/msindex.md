@@ -3,7 +3,7 @@ title: "MS-Index: Fast Top-k Subsequence Search for Multivariate Time Series und
 collection: publications
 category: conferences
 permalink: /publication/msindex_2026
-excerpt: ''
+excerpt: 'MS-Index is an exact index for top-k subsequence search on multivariate time series under Euclidean distance, supporting ad-hoc query channel selection and outperforming the state-of-the-art by one to two orders of magnitude.'
 date: 2025-10-01
 venue: 'VLDB 2026'
 paperurl: 'https://dl.acm.org/doi/abs/10.14778/3773749.3773751?download=true'

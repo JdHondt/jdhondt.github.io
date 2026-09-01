@@ -3,7 +3,7 @@ title: "Beyond the Dimensions: A Structured Evaluation of Multivariate Time Seri
 collection: publications
 category: conferences
 permalink: /publication/icde_jens_talk
-excerpt: ''
+excerpt: 'ICDE 2024 paper presenting a structured evaluation and novel taxonomy of 12 multivariate time-series distance measures, showing that the optimal choice depends on the data and task at hand.'
 date: 2024-05-13
 venue: 'ICDE'
 slidesurl: 'https://github.com/user-attachments/files/17813770/dhondt_beyond_the_dimensions.pdf'

@@ -3,7 +3,7 @@ title: "MULISSE: Variable-Length Similarity Search for Multivariate Time Series"
 collection: publications
 category: conferences
 permalink: /publication/multisa25
-excerpt: ''
+excerpt: 'Workshop paper (MulTiSa @ ICDE 2025) introducing MULISSE, an algorithm for exact variable-length k-NN subsequence search on multivariate time series, achieving up to two orders of magnitude speedup on synthetic datasets.'
 date: 2025-05-01
 venue: 'ICDE'
 paperurl: /files/multisa25.pdf
