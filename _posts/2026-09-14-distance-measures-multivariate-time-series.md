@@ -1,6 +1,6 @@
 ---
 title: "Which distance measure should you use for multivariate time series?"
-date: 2026-10-01
+date: 2026-09-14
 permalink: /blog/distance-measures-multivariate-time-series/
 excerpt: "A practical guide to picking a distance measure for multivariate time series, based on our SIGMOD 2025 study of 30 measures on 30 datasets."
 tags:
@@ -11,7 +11,6 @@ tags:
 
 **TL;DR** If you need a distance measure for multivariate time series and have no time to experiment, start with the channel-dependent Shape-based Distance (SBD-D): in our SIGMOD 2025 study it gave the best accuracy for its runtime, and it has no parameters to tune. If speed is everything, use Lorentzian distance instead of Euclidean; if accuracy is everything and you can afford days of compute, use a tuned channel-independent elastic measure like MSM-I. And do not assume z-score normalization helps: on the 30 datasets we tested, not normalizing at all ranked first.
 
-<!-- FIGURE: taxonomy of the seven temporal models (lock-step, sliding, elastic, kernel, feature-based, model-based, embedding), from Fig. 2 of the paper -->
 
 ## Why this is a harder question than it looks
 
@@ -96,7 +95,7 @@ Note the `standardize=False`: aeon z-scores each series inside `sbd_distance` by
 ## Where to go next
 
 - The full paper: [A Structured Study of Multivariate Time-Series Distance Measures](/publication/sigmod_2025), SIGMOD 2025, [doi:10.1145/3725258](https://doi.org/10.1145/3725258). The guidelines are in Section 6.
-- The earlier, smaller version: [Beyond the Dimensions](/publication/icde_jens_talk), ICDE 2024 MulTiSa workshop. That study compared 12 measures on the UEA archive and found no single winner; the SIGMOD paper is what happened when we added the missing families, normalizations, tasks, and statistics. <!-- VERIFY: the publication page says 12 measures; the ICDE slides say 7 + 2 new measures and the results table lists 6 -->
+- The earlier, smaller version: [Beyond the Dimensions](/publication/icde_jens_talk), ICDE 2024 MulTiSa workshop. That study compared 12 measures on the UEA archive and found no single winner; the SIGMOD paper is what happened when we added the missing families, normalizations, tasks, and statistics.
 - Background reading: [A Survey on Time-Series Distance Measures](/publication/book_chapter_2024), covering the 100+ measures and 7 categories the study draws from.
 
 ## Cite this

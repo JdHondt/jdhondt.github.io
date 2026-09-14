@@ -17,9 +17,8 @@ main:
   # - title: "Portfolio"
   #   url: /portfolio/
         
-  # Uncomment when the first post in _posts/ is published (and drop noindex from _pages/blog.html).
-  # - title: "Blog"
-  #   url: /blog/
+  - title: "Blog"
+    url: /blog/
     
   - title: "CV"
     url: /cv/

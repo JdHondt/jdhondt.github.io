@@ -21,13 +21,14 @@ Some recent projects I have been working on include:
 - Large-scale evaluations of distance measures for multivariate time series: a [SIGMOD 2025 study](/publication/sigmod_2025) of 30 measures, the earlier [ICDE 2024 workshop paper](/publication/icde_jens_talk), and a [survey of over 100 time-series distance measures](/publication/book_chapter_2024).
 - Synthetic data that keeps the correlation structure of the original: [Generative Correlation Manifolds](/publication/gcm_whitepaper_2025).
 
-All papers, with abstracts and links to code and slides, are on the [publications page](/publications/); recordings and slides are under [talks](/talks/). A short [CV](/cv/) is on the site, and a [PDF version](/files/postdoc25.pdf) is available too.
+All papers, with abstracts and links to code and slides, are on the [publications page](/publications/); recordings and slides are under [talks](/talks/). Longer, plain-language write-ups of this work are on the [blog](/blog/). A short [CV](/cv/) is on the site, and a [PDF version](/files/postdoc25.pdf) is available too.
 
 Please feel free to reach out to me if you have any questions or would like to discuss any of my work. I am always open to new collaborations and opportunities.
 
 ---
 
 ## News
+- **Sep 14, 2026**: I started a [blog](/blog/). The first post is a practical guide to [choosing a distance measure for multivariate time series](/blog/distance-measures-multivariate-time-series/), based on our SIGMOD 2025 study.
 - **Aug 7, 2026**: New preprint alert! My paper "Neural downscaling of air-quality simulations requires structural correction before spatial refinement" is now available as a preprint and is currently under review at Nature Communications. Read it [here](/publication/naturecomms_2026).
 - **Mar 20, 2026**: My paper on physics-based super-resolution models for downscaling atmospheric simulations has been accepted at EGU 2026 in Vienna, Austria. The abstract can be found [here](/publication/egu_2026).
 - **Dec 16, 2025**: I successfully defended my PhD thesis at TU Eindhoven!

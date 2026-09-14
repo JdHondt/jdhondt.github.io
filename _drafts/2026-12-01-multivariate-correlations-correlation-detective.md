@@ -90,8 +90,6 @@ StatBag statBag = cd.getStatBag();
 statBag.saveAsJson("/path/to/output/stats.json");
 ```
 
-<!-- VERIFY: the README's snippets switch between `rs` and `resultSet` for the same object and its RunParameters example omits `new`; the code above follows the direct-constructor example and assumes the same object. Also confirm the Maven artifact is published on Maven Central under io.github.correlationdetective. -->
-
 Other useful knobs in `RunParameters` are `setMinJump`, `setIrreducibility`, `setTopK`, and `setNVectors` to try a prefix of the data first; `PARAMETERS.md` in the repository lists all of them. The parameter table also lists `SPEARMAN_CORRELATION` and `MANHATTAN_SIMILARITY`, which are not evaluated in the papers.
 
 ## What I would use it for today

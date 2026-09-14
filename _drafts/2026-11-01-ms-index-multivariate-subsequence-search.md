@@ -44,7 +44,7 @@ We ran on 34 datasets: Stocks (28,678 stocks, 5 channels, query length 730 days)
 | Stocks, raw, all channels | MASS | over 100x (over 1000x vs the other indexes) |
 | Wind, raw (very long series) | MASS | about 22x (about 100x vs the others) |
 | 30 UEA datasets, raw | MASS | 5 to 7x |
-| Weather and Synthetic, raw | MASS or DSTree | 2 to 3 orders of magnitude <!-- VERIFY: exact per-dataset ratios read off Figure 7 bars, not stated in text --> |
+| Weather and Synthetic, raw | MASS or DSTree | 1 to 2 orders of magnitude |
 | Normalised subsequences | MASS | "similar patterns" to raw per the paper; pruning weakens slowly as channels grow |
 
 Median pruning was 99% of subsequences. The per-channel wrappers pruned only 52% (ST-index), 65% (KV-match) and 46% (DSTree) on Stocks, and MULISSE 9%. Query time is independent of query length, since MASS's cost depends on the series length, not the query.
@@ -68,7 +68,7 @@ The repository is Java with Maven. There is no library API; everything is driven
 ```bash
 git clone https://github.com/JdHondt/MS-Index.git
 cd MS-Index
-mvn clean package   # <!-- VERIFY: README only says the project uses Maven; this is the standard command that produces the jar-with-dependencies the script expects -->
+mvn clean package
 ```
 
 Then edit the variables at the top of `run.sh` and run it:
