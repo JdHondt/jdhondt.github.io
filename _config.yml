@@ -13,7 +13,7 @@ short_title              : "Jens d'Hondt"   # suffix for <title> on inner pages;
 title_separator          : "-"
 name                     : &name "Jens E. d'Hondt, PhD"
 description              : &description "Jens d'Hondt, postdoctoral scientist at the Barcelona Supercomputing Center: ML downscaling of atmospheric simulations and multivariate time-series search."
-url                      : https://jdhondt.github.io
+url                      : https://jensdhondt.com   # custom domain since 14 Sep 2026; jdhondt.github.io 301-redirects here
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "jdhondt/jdhondt.github.io"
 
