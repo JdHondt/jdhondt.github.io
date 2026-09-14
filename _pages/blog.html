@@ -1,0 +1,18 @@
+---
+layout: archive
+title: "Blog"
+permalink: /blog/
+author_profile: true
+excerpt: "Plain-language explainers by Jens d'Hondt on multivariate time-series distance measures, similarity search, correlation discovery and deep-learning downscaling."
+# Remove the two lines below when the first post goes live, and uncomment "Blog" in _data/navigation.yml.
+noindex: true
+sitemap: false
+---
+
+{% include base_path %}
+
+<p>Longer, plain-language write-ups of things I have worked on: which distance measure to pick for multivariate time series, how to search them when only some channels matter, how to find correlations beyond pairs, and what deep learning can and cannot do for air-quality simulations. Each post links to the underlying paper on the <a href="{{ base_path }}/publications/">publications page</a>.</p>
+
+{% for post in site.posts %}
+  {% include archive-single.html %}
+{% endfor %}

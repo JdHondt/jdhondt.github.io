@@ -3,6 +3,9 @@ layout: archive
 title: "Sitemap"
 permalink: /sitemap/
 author_profile: true
+noindex: true
+sitemap: false
+excerpt: "Every page on this site, in one list."
 ---
 
 {% include base_path %}

@@ -3,13 +3,16 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
+excerpt: "Papers by Jens d'Hondt on multivariate time-series similarity search, distance measures, correlation discovery and deep-learning downscaling of air-quality simulations, at VLDB, SIGMOD, ICDE and beyond."
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
+
+<p>My work sits in two areas. During my PhD at TU Eindhoven I built algorithms for <strong>similarity search and correlation discovery on multivariate time series</strong>: how to compare series with many channels, and how to find matching subsequences or correlated groups in large collections quickly. At the Barcelona Supercomputing Center I now work on <strong>deep-learning downscaling of atmospheric chemistry simulations</strong>, with an emphasis on physical constraints and probabilistic models. Each entry below has its own page with the abstract, citation and links to the paper, code and slides.</p>
+
+{% if site.author.googlescholar %}
+  <p class="wordwrap">Citation counts and the full list are on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>. Recordings and slides of the talks are on the <a href="{{ base_path }}/talks/">talks page</a>.</p>
+{% endif %}
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
@@ -31,6 +34,3 @@ author_profile: true
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
-
-
-

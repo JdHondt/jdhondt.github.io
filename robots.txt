@@ -1,0 +1,9 @@
+---
+layout: null
+sitemap: false
+---
+# Everything on this site is meant to be found, including by AI assistants.
+User-agent: *
+Allow: /
+
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml

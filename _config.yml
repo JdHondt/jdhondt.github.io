@@ -9,9 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 title                    : "Jens E. d'Hondt, PhD"
+short_title              : "Jens d'Hondt"   # suffix for <title> on inner pages; keeps long paper titles within what Google shows
 title_separator          : "-"
 name                     : &name "Jens E. d'Hondt, PhD"
-description              : &description "Jens E. d'Hondt, PhD — Postdoctoral Scientist at the Barcelona Supercomputing Center working on ML-based downscaling of atmospheric simulations and efficient algorithms for multivariate similarity search."
+description              : &description "Jens d'Hondt, postdoctoral scientist at the Barcelona Supercomputing Center: ML downscaling of atmospheric simulations and multivariate time-series search."
 url                      : https://jdhondt.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "jdhondt/jdhondt.github.io"
@@ -76,12 +77,12 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
   conferences:
-    title: 'Conference Papers'
+    title: 'Conference and Workshop Papers'
+  preprints:
+    title: 'Preprints and Reports'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -137,7 +138,14 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "og-card.png" # Open Graph/Twitter default site image
+og_image                 : "og-card.jpg" # Open Graph/Twitter default site image, 1200x630
+og_image_alt             : "Jens d'Hondt, postdoctoral scientist at the Barcelona Supercomputing Center"
+# Name variants people actually type into search; emitted as schema.org alternateName on the homepage.
+alternate_names:
+  - "Jens d'Hondt"
+  - "Jens Dhondt"
+  - "Jens dHondt"
+  - "Jens E. d'Hondt"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -224,13 +232,7 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -258,15 +260,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
   # _publications
   - scope:
       path: ""
@@ -276,15 +269,16 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
+  # Static files (PDFs, slide decks) are for downloading, not for ranking:
+  # keep them out of sitemap.xml so crawl attention goes to the HTML pages.
   - scope:
-      path: ""
-      type: portfolio
+      path: "files"
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
+      sitemap: false
+  - scope:
+      path: "google7a52d474323bc0bd.html"
+    values:
+      sitemap: false
   # _talks
   - scope:
       path: ""
@@ -311,8 +305,6 @@ timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # Plugins
 plugins:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
   - jemoji
@@ -320,8 +312,6 @@ plugins:
 # Mimic GitHub Pages with --safe
 whitelist:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
   - jemoji
