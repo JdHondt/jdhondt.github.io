@@ -8,6 +8,9 @@ local/
 # Ignore Claude Code project instructions
 CLAUDE.md
 
+# Ignore local MCP server config (machine-specific paths)
+.mcp.json
+
 # Ignore the Gemfile that is generated
 Gemfile.lock
 

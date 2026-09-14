@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I'm Jens, a Postdoctoral Scientist at the [Barcelona Supercomputing Center](https://www.bsc.es/). In 2025, I defended my PhD thesis on "Efficient Algorithms for Multivariate Similarity Search" at [TU Eindhoven](https://www.tue.nl/en/), where I was part of the Data & AI cluster at the [Department of Mathematics and Computer Science](https://www.tue.nl/en/our-university/departments/mathematics-and-computer-science).
+Hi there! I'm Jens, a Postdoctoral Scientist at the [Barcelona Supercomputing Center](https://www.bsc.es/). In 2025, I defended my PhD thesis on "Effective and Efficient Multivariate Similarity Search" at [TU Eindhoven](https://www.tue.nl/en/), where I was part of the Data & AI cluster at the [Department of Mathematics and Computer Science](https://www.tue.nl/en/our-university/departments/mathematics-and-computer-science).
 
 My research interests are twofold. Currently, I am working on super-resolution models for downscaling atmospheric simulations, with a focus on **probabilistic models with physics-based constraints**.
 In the past, I have worked on the design and implementation of efficient algorithms for multivariate similarity search, particularly in the context of high-dimensional data (i.e., **vector search**).
