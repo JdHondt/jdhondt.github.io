@@ -15,7 +15,7 @@ A PDF version of my CV is available [here]({{ base_path }}/files/postdoc25.pdf).
 ## Education
 
 * Ph.D. in Computer Science, Eindhoven University of Technology (TU/e), Nov 2021 – Dec 2025
-  * Thesis: *Efficient Algorithms for Multivariate Similarity Search*
+  * Thesis: *Effective and Efficient Multivariate Similarity Search*
   * Supervisors: dr. Odysseas Papapetrou and prof. dr. George Fletcher
 * M.Sc. in Data Science and Artificial Intelligence, TU/e, 2019 – 2021 — *Cum Laude* (GPA 9.1/10)
 * B.Sc. in Industrial Engineering, TU/e, 2016 – 2019 — *Cum Laude* (GPA 8.5/10)
