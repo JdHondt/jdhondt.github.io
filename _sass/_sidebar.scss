@@ -130,6 +130,11 @@
 
 .sidebar .author__desktop {
   display: none;
+  // location/employer/nationality are plain text, not link labels, so let
+  // them wrap instead of inheriting .author__urls li's white-space: nowrap,
+  // which pushed long values (e.g. "Barcelona Supercomputing Center") past
+  // the narrow sidebar and over the main content.
+  white-space: normal;
   @media screen and (min-width: 1024px) {
     display: block;
   }
