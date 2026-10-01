@@ -107,6 +107,58 @@
   }
 }
 
+/* List item with a teaser thumbnail (blog page): image stacked on top on
+   small screens, to the left of the text from $medium up. A float plus a
+   left margin on the text (rather than grid/flex) keeps the theme's vertical
+   margins collapsing as usual. */
+.list__item--teaser {
+  padding-right: 0;
+
+  .archive__item {
+    display: flow-root;
+    margin-top: 2em;
+  }
+
+  /* Divider between consecutive posts, so stacked items stay distinct on phones. */
+  & + & .archive__item {
+    border-top: 1px solid $border-color;
+    padding-top: 2em;
+  }
+
+  /* Fixed 2:1 frame with the figure contained (not cropped), so thumbnails of
+     different aspect ratios line up and stay short on narrow screens. */
+  .archive__item-teaser {
+    display: block;
+    aspect-ratio: 2 / 1;
+    padding: 6px;
+    background: #fff;
+    border: 1px solid $border-color;
+    margin-bottom: 0.75em;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .archive__item-title {
+    margin-top: 0;
+  }
+
+  @include breakpoint($medium) {
+    .archive__item-teaser {
+      float: left;
+      width: 240px;
+      margin-bottom: 0;
+    }
+
+    .archive__item > :not(.archive__item-teaser) {
+      margin-left: calc(240px + 1.5em);
+    }
+  }
+}
+
 
 /*
    Grid view

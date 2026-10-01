@@ -12,9 +12,13 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item">
+<div class="{{ include.type | default: "list" }}__item{% if include.type == "list" and post.header.teaser %} list__item--teaser{% endif %}">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if include.type == "grid" and teaser %}
+    {% if include.type == "list" and post.header.teaser %}
+      <a class="archive__item-teaser" href="{{ base_path }}{{ post.url }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ post.header.teaser | prepend: "/images/" | prepend: base_path }}" alt="" loading="lazy">
+      </a>
+    {% elsif include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
           {% if teaser contains "://" %}

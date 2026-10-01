@@ -2,6 +2,8 @@
 title: "Searching multivariate time series when only some channels matter"
 date: 2026-10-01
 permalink: /blog/ms-index-multivariate-subsequence-search/
+header:
+  teaser: blog/ms-index/problem.png
 excerpt: "How MS-Index finds top-k similar subsequences in multivariate time series when the relevant channels are only chosen at query time, exactly and fast."
 tags:
   - time series
