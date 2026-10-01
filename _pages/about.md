@@ -29,6 +29,7 @@ Please feel free to reach out to me if you have any questions or would like to d
 
 ## News
 - **Sep 14, 2026**: I started a [blog](/blog/). The first post is a practical guide to [choosing a distance measure for multivariate time series](/blog/distance-measures-multivariate-time-series/), based on our SIGMOD 2025 study.
+- **Oct 1, 2026**: New blog post: [searching multivariate time series when only some channels matter](/blog/ms-index-multivariate-subsequence-search/), on our MS-Index paper for exact subsequence search with query-time channel selection.
 - **Aug 7, 2026**: New preprint alert! My paper "Neural downscaling of air-quality simulations requires structural correction before spatial refinement" is now available as a preprint and is currently under review at Nature Communications. Read it [here](/publication/naturecomms_2026).
 - **Mar 20, 2026**: My paper on physics-based super-resolution models for downscaling atmospheric simulations has been accepted at EGU 2026 in Vienna, Austria. The abstract can be found [here](/publication/egu_2026).
 - **Dec 16, 2025**: I successfully defended my PhD thesis at TU Eindhoven!
