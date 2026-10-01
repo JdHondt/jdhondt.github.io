@@ -97,6 +97,7 @@ runtimeMode=FULL_NO_STORE # FULL, INDEX, QUERY variants
 
 ## Cite this
 
+{% raw %}
 ```bibtex
 @article{dhondt2025msindex,
   author  = {d'Hondt, Jens and Kortekaas, Teun and Papapetrou, Odysseas and Palpanas, Themis},
@@ -109,3 +110,4 @@ runtimeMode=FULL_NO_STORE # FULL, INDEX, QUERY variants
   doi     = {10.14778/3773749.3773751}
 }
 ```
+{% endraw %}
