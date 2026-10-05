@@ -4,6 +4,8 @@ seo_title: "MS-Index: Top-k Subsequence Search for Multivariate Time Series (VLD
 collection: publications
 category: conferences
 permalink: /publication/msindex_2026
+header:
+  teaser: blog/ms-index/problem.png
 excerpt: 'MS-Index is an exact index for top-k subsequence search on multivariate time series under Euclidean distance, supporting ad-hoc query channel selection and outperforming the state-of-the-art by one to two orders of magnitude.'
 date: 2025-10-01
 venue: 'VLDB 2026 (Proceedings of the VLDB Endowment 19(2))'
@@ -19,5 +21,10 @@ citation: "Jens E. d'Hondt, Teun Kortekaas, Odysseas Papapetrou, and Themis Palp
 ---
 
 Modern applications frequently collect and analyze temporal data in the form of multivariate time series (MTS) - time series that contain multiple channels. A common task in this context is subsequence search, which involves identifying all MTS that contain subsequences highly similar to a query time series. In practical scenarios, not all channels of an MTS are relevant to every query. For instance, airplane sensors may gather data on a plethora of components and subsystems, but only a few of these are relevant to a specific query, such as identifying the cause of a malfunctioning landing gear, or a specific flight maneuver. Consequently, the relevant query channels are often specified at query time. In this work, we introduce the Multivariate Subsequence Index (MS-Index), a novel algorithm for nearest neighbor MTS subsequence search under Euclidean distance that supports ad-hoc selection of query channels. The algorithm is exact and demonstrates query performance that scales sublinearly to the number of query channels. We examine the properties of MS-Index with a thorough experimental evaluation over 34 datasets, and show that it outperforms the state-of-the-art one to two orders of magnitude for both raw and normalized subsequences.
+
+<figure>
+  <a href="/images/blog/ms-index/problem.png" target="_blank" rel="noopener"><img src="/images/blog/ms-index/problem.png" alt="Four channels of flight data: altitude, landing gear, engine temperature and latitude. A short query window of a failed landing on the left; a long historical record on the right with the best-matching window highlighted on the altitude and landing gear channels only. Engine temperature and latitude are greyed out and marked ignored." style="width:100%"></a>
+  <figcaption>Ad-hoc channel selection, the problem MS-Index solves. The query is a window of a failed landing, and only altitude and landing gear matter for this question; the best match is the window closest on those two channels. Another query can pick other channels against the same index. (Illustration with synthetic data; click to enlarge.)</figcaption>
+</figure>
 
 **Resources:** [camera-ready PDF](/files/msindex_vldb26_revised_camera.pdf), [arXiv preprint](https://arxiv.org/abs/2512.14723), [source code on GitHub](https://github.com/JdHondt/MS-Index) (Java). The paper will be presented at VLDB 2026 in Boston. Our earlier, variable-length approach to the same problem is [MULISSE](/publication/multisa25).

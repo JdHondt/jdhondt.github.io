@@ -4,6 +4,8 @@ seo_title: "Generative Correlation Manifolds: Synthetic Data with Preserved Corr
 collection: publications
 category: preprints
 permalink: /publication/gcm_whitepaper_2025
+header:
+  teaser: papers/gcm_whitepaper_2025.png
 excerpt: 'White paper introducing Generative Correlation Manifolds (GCM), a computationally efficient synthetic data generation method that provably preserves the full correlation structure of a source dataset, from pairwise to higher-order interactions.'
 date: 2025-09-03
 venue: 'arXiv'
@@ -18,5 +20,10 @@ citation: "d'Hondt, J.E., Punter, W.R., Papapetrou, O. (2025). Generative Correl
 ---
 
 The increasing need for data privacy and the demand for robust machine learning models have fueled the development of synthetic data generation techniques. However, current methods often succeed in replicating simple summary statistics but fail to preserve both the pairwise and higher-order correlation structure of the data that define the complex, multi-variable interactions inherent in real-world systems. This limitation can lead to synthetic data that is superficially realistic but fails when used for sophisticated modeling tasks. In this white paper, we introduce Generative Correlation Manifolds (GCM), a computationally efficient method for generating synthetic data. The technique uses Cholesky decomposition of a target correlation matrix to produce datasets that, by mathematical proof, preserve the entire correlation structure – from simple pairwise relationships to higher-order interactions – of a z-normalized source dataset. We argue that this method provides a new approach to synthetic data generation with potential applications in privacy-preserving data sharing, robust model training, and simulation.
+
+<figure>
+  <a href="/images/papers/gcm_whitepaper_2025.png" target="_blank" rel="noopener"><img src="/images/papers/gcm_whitepaper_2025.png" alt="Two diagrams of three variables A, B and C. Left: three blue edges for the pairwise (second-order) correlations. Right: one shaded triangle over all three variables for a third-order correlation." style="width:70%;display:block;margin:0 auto"></a>
+  <figcaption>Orders of correlation. Pairwise correlations relate two variables at a time; a higher-order correlation relates a set of variables jointly, and can be present even when no pair is strongly correlated. (Figure from the paper.)</figcaption>
+</figure>
 
 **Resources:** [arXiv](https://arxiv.org/abs/2510.21610), [PDF](/files/gcm_whitepaper.pdf), [code on GitHub](https://github.com/JdHondt/gcm). The higher-order correlations GCM preserves are the same ones [Correlation Detective](/publication/cd_journal_2024) searches for.

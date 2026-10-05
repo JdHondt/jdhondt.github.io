@@ -159,6 +159,21 @@
   }
 }
 
+/* Publication figures are denser diagrams than blog teasers, so they get a
+   wider, less elongated frame on desktop. */
+.publication-list .list__item--teaser {
+  @include breakpoint($medium) {
+    .archive__item-teaser {
+      width: 360px;
+      aspect-ratio: 3 / 2;
+    }
+
+    .archive__item > :not(.archive__item-teaser) {
+      margin-left: calc(360px + 1.5em);
+    }
+  }
+}
+
 
 /*
    Grid view

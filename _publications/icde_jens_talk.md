@@ -4,6 +4,8 @@ seo_title: "Beyond the Dimensions: Multivariate Distance Measures (ICDE 2024)"
 collection: publications
 category: conferences
 permalink: /publication/icde_jens_talk
+header:
+  teaser: papers/icde_jens_talk.png
 excerpt: 'ICDE 2024 workshop paper presenting a structured evaluation and novel taxonomy of 12 multivariate time-series distance measures, showing that the optimal choice depends on the data and task at hand.'
 date: 2024-05-13
 venue: 'ICDE 2024 Workshops (MulTiSA)'
@@ -18,5 +20,10 @@ citation: "J. E. d'Hondt, O. Papapetrou and J. Paparrizos, \"Beyond the Dimensio
 ---
 
 A variety of distance measures for multivariate time series has been proposed in recent literature. However, evaluations of such measures have been incomplete; comparisons are limited to subsets of similar measures, lacking a holistic view of the field with an appropriate taxonomy of measures. This paper presents a structured evaluation of multivariate time series distance measures. Through a novel taxonomy, measures are categorized based on how they handle the multiple variates; in an atomic or a holistic manner. Experimental evaluation of 12 measures shows that no single measure or approach is superior; the optimal choice depends on the data and the task at hand.
+
+<figure>
+  <a href="/images/papers/icde_jens_talk.png" target="_blank" rel="noopener"><img src="/images/papers/icde_jens_talk.png" alt="Two multivariate time series Q and D with two dimensions each. Red arrows compare matching dimensions directly (inter-dimensional distance); below each series is its correlation matrix between dimensions, and a purple arrow compares the two matrices (intra-dimensional distance)." style="width:100%"></a>
+  <figcaption>Inter- versus intra-dimensional distance. Inter-dimensional measures compare the series dimension by dimension; intra-dimensional measures compare how the dimensions relate to each other within each series, here summarised by their correlation matrices. (Figure from the paper; click to enlarge.)</figcaption>
+</figure>
 
 This workshop paper was the starting point for our much larger [SIGMOD 2025 study](/publication/sigmod_2025) of 30 measures. I presented it at the [MulTiSA workshop](/talks/2024-05-13-icde) in Utrecht.
