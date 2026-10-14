@@ -1,0 +1,277 @@
+/* ==========================================================================
+   CV PAGE (_pages/cv.md)
+   ========================================================================== */
+
+$cv-accent: $link-color;
+$cv-rail: 8.5em; /* width of the date column on wide screens */
+
+.cv {
+  h2 {
+    margin-top: 2.25em;
+    padding-bottom: 0.35em;
+    border-bottom: 2px solid $border-color;
+    font-size: $type-size-4;
+    letter-spacing: 0.02em;
+  }
+
+  ul,
+  ol {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  /* beat .page__content a, which underlines every link */
+  a.btn,
+  a.cv-list__title {
+    text-decoration: none;
+  }
+
+  a.cv-list__title:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Intro blurb with download/navigation buttons */
+
+.cv-intro {
+  margin-bottom: 1.5em;
+  padding: 1.1em 1.25em;
+  border-left: 4px solid $cv-accent;
+  background-color: mix(#fff, $cv-accent, 92%);
+  border-radius: 0 $border-radius $border-radius 0;
+
+  p {
+    margin: 0 0 0.75em;
+  }
+}
+
+.cv-actions .btn {
+  margin-right: 0.35em;
+
+  i {
+    margin-right: 0.35em;
+  }
+}
+
+/* Timeline for experience, education and grants. The date sits in a left
+   rail on wide screens and stacks above the entry on narrow ones. */
+
+.cv-timeline {
+  list-style: none;
+  position: relative;
+
+  @include breakpoint($medium) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.4em;
+      bottom: 0.4em;
+      left: $cv-rail;
+      border-left: 2px solid $border-color;
+    }
+  }
+}
+
+.cv-entry {
+  position: relative;
+  margin-bottom: 1.4em;
+
+  @include breakpoint($medium) {
+    display: flex;
+
+    /* timeline dot, centred on the rail */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.35em;
+      left: calc(#{$cv-rail} - 5px);
+      width: 12px;
+      height: 12px;
+      border: 2px solid $cv-accent;
+      border-radius: 50%;
+      background-color: $background-color;
+    }
+  }
+
+  &--current::before {
+    background-color: $cv-accent;
+  }
+
+  &__when {
+    color: $gray;
+    font-size: $type-size-6;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @include breakpoint($medium) {
+      flex: 0 0 ($cv-rail / 0.75); /* em is relative to this column's 0.75em font */
+      padding: 0.15em 1.25em 0 0;
+      text-align: right;
+    }
+  }
+
+  &__body {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.9em;
+
+    @include breakpoint($medium) {
+      padding-left: 1.5em;
+    }
+
+    p,
+    ul {
+      margin: 0.2em 0 0;
+    }
+
+    ul {
+      padding-left: 1.1em;
+    }
+
+    li {
+      margin-bottom: 0.15em;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.35;
+  }
+
+  &__org {
+    color: $gray;
+    font-style: italic;
+  }
+}
+
+.cv-tag {
+  display: inline-block;
+  margin-left: 0.4em;
+  padding: 0.1em 0.55em;
+  color: $gray;
+  font-size: $type-size-7;
+  font-weight: normal;
+  vertical-align: middle;
+  border: 1px solid $light-gray;
+  border-radius: 1em;
+
+  &--honor {
+    color: mix(#000, $warning-color, 35%);
+    border-color: mix(#fff, $warning-color, 40%);
+    background-color: mix(#fff, $warning-color, 90%);
+  }
+}
+
+/* Skills as chips */
+
+.cv-skills {
+  display: grid;
+  grid-gap: 1em 1.5em;
+
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h3 {
+    margin: 0 0 0.5em;
+    color: $gray;
+    font-size: $type-size-6;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
+
+.cv-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0.2em 0.65em;
+    font-size: $type-size-6;
+    border: 1px solid $border-color;
+    border-radius: 1em;
+    background-color: $code-background-color;
+  }
+}
+
+/* Compact publication and talk lists, newest first */
+
+.cv-list {
+  list-style: none;
+
+  &__item {
+    display: flex;
+    margin: 0;
+    padding: 0.6em 0;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__year {
+    flex: 0 0 3.5em;
+    padding-top: 0.1em;
+    color: $gray;
+    font-size: $type-size-6;
+    font-weight: bold;
+  }
+
+  &__body {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.9em;
+  }
+
+  &__title {
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1.35;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__meta {
+    margin-top: 0.2em;
+    color: $gray;
+    font-size: 0.85em;
+  }
+}
+
+.cv-badge {
+  display: inline-block;
+  margin-right: 0.35em;
+  padding: 0.05em 0.5em;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: bold;
+  border-radius: $border-radius;
+  background-color: $gray;
+
+  &--journal    { background-color: mix(#000, $cv-accent, 25%); }
+  &--conference { background-color: $cv-accent; }
+  &--workshop   { background-color: mix(#fff, $cv-accent, 30%); color: mix(#000, $cv-accent, 60%); }
+  &--thesis     { background-color: mix(#000, $warning-color, 20%); }
+  &--preprint   { background-color: $light-gray; color: $darker-gray; }
+}
+
+/* Academic service */
+
+.cv-service {
+  list-style: none;
+  font-size: 0.9em;
+
+  li {
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+    border-left: 3px solid $border-color;
+  }
+}
