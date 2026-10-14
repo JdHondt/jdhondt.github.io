@@ -8,6 +8,9 @@ main:
   - title: "Publications"
     url: /publications/
 
+  - title: "Thesis"
+    url: /publication/phd_thesis_2025
+
   - title: "Talks"
     url: /talks/    
 

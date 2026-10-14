@@ -230,6 +230,31 @@ figure {
       width: 100%;
     }
   }
+
+  /* Small centred illustration, e.g. one per chapter on the thesis page. */
+  &.compact {
+    justify-content: center;
+    margin: 1em 0 1.5em;
+
+    > a {
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+    }
+
+    /* Cap the height too, so near-square figures stay as small as wide ones. */
+    img {
+      width: auto;
+      max-width: 100%;
+      max-height: 240px;
+      margin-bottom: 0.25em;
+    }
+
+    figcaption {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
 
 /* Figure captions */

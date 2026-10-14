@@ -177,7 +177,9 @@
   <script type="application/ld+json">
     {
       "@context" : "https://schema.org",
-      "@type" : "ScholarlyArticle",
+      "@type" : {% if page.category == "theses" %}"Thesis"{% else %}"ScholarlyArticle"{% endif %},
+      {% if page.category == "theses" %}"inSupportOf" : "PhD",{% endif %}
+      {% if page.isbn %}"isbn" : {{ page.isbn | jsonify }},{% endif %}
       "headline" : {{ page.title | jsonify }},
       "name" : {{ page.title | jsonify }},
       {% if page.authors %}
@@ -193,7 +195,9 @@
       {% if page.doi %}"identifier" : { "@type" : "PropertyValue", "propertyID" : "DOI", "value" : {{ page.doi | jsonify }} },{% endif %}
       {% if page.doi %}"sameAs" : {{ page.doi | prepend: "https://doi.org/" | jsonify }},{% elsif page.paperurl %}"sameAs" : {{ seo_paperurl | jsonify }},{% endif %}
       {% if page.venue %}
-        {% if page.category == "manuscripts" %}
+        {% if page.category == "theses" and page.institution %}
+      "sourceOrganization" : { "@type" : "CollegeOrUniversity", "name" : {{ page.institution | jsonify }} },
+        {% elsif page.category == "manuscripts" %}
       "isPartOf" : { "@type" : "Periodical", "name" : {{ page.venue | jsonify }} },
         {% elsif page.category == "conferences" %}
       "publication" : { "@type" : "PublicationEvent", "name" : {{ page.venue | jsonify }} },
@@ -216,9 +220,10 @@
   {% endif %}
   {% if page.date %}<meta name="citation_publication_date" content="{{ page.date | date: "%Y/%m/%d" }}">{% endif %}
   {% if page.venue %}
-    {% if page.category == "manuscripts" %}<meta name="citation_journal_title" content="{{ page.venue | escape_once }}">{% elsif page.category == "conferences" %}<meta name="citation_conference_title" content="{{ page.venue | escape_once }}">{% endif %}
+    {% if page.category == "manuscripts" %}<meta name="citation_journal_title" content="{{ page.venue | escape_once }}">{% elsif page.category == "conferences" %}<meta name="citation_conference_title" content="{{ page.venue | escape_once }}">{% elsif page.category == "theses" and page.institution %}<meta name="citation_dissertation_institution" content="{{ page.institution | escape_once }}">{% endif %}
   {% endif %}
   {% if page.doi %}<meta name="citation_doi" content="{{ page.doi }}">{% endif %}
+  {% if page.isbn %}<meta name="citation_isbn" content="{{ page.isbn }}">{% endif %}
   {% if page.paperurl contains ".pdf" %}<meta name="citation_pdf_url" content="{{ seo_paperurl }}">{% elsif page.pdfurl %}<meta name="citation_pdf_url" content="{% if page.pdfurl contains "://" %}{{ page.pdfurl }}{% else %}{{ page.pdfurl | prepend: seo_url }}{% endif %}">{% endif %}
   {% if page.paperurl %}<meta name="citation_abstract_html_url" content="{{ seo_paperurl }}">{% endif %}
 {% endif %}
