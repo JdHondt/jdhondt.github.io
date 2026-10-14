@@ -98,18 +98,6 @@ redirect_from:
   </li>
 </ol>
 
-<h2 id="grants">Grants</h2>
-
-<ol class="cv-timeline">
-  <li class="cv-entry">
-    <div class="cv-entry__when">2025</div>
-    <div class="cv-entry__body">
-      <h3 class="cv-entry__title">SURF Compute Call, Small Compute Grant</h3>
-      <p class="cv-entry__org">Snellius (Dutch national supercomputer) · grant no. EINF-13076</p>
-    </div>
-  </li>
-</ol>
-
 <h2 id="skills">Skills</h2>
 
 <div class="cv-skills">
@@ -174,5 +162,17 @@ redirect_from:
   <li><strong>Publication chair:</strong> MulTiSA Workshop on Multivariate Time Series Analysis, ICDE 2024 &amp; 2025</li>
   <li><strong>Teaching:</strong> co-lecturer, "Big Data Management" (TU/e); supervisor to 8 Master's students</li>
 </ul>
+
+<h2 id="grants">Grants</h2>
+
+<ol class="cv-timeline">
+  <li class="cv-entry">
+    <div class="cv-entry__when">2025</div>
+    <div class="cv-entry__body">
+      <h3 class="cv-entry__title">SURF Compute Call, Small Compute Grant</h3>
+      <p class="cv-entry__org">Snellius (Dutch national supercomputer) · grant no. EINF-13076</p>
+    </div>
+  </li>
+</ol>
 
 </div>
