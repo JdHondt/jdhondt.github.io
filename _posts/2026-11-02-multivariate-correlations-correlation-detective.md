@@ -108,11 +108,14 @@ Other useful knobs in `RunParameters` are `setMinJump`, `setIrreducibility`, `se
 - **Finding baskets in financial data.** An asset that tracks a combination of others is interesting for hedging and for spotting redundancy in a portfolio. The streaming variant is what you want to keep up with minute-level prices.
 - **Monitoring many sensors or servers.** Prior work used multivariate correlation across server requests to detect denial-of-service attacks. Any setting with thousands of streams where a single sensor is only explained by a combination of others fits.
 
+The [Correlation Detective website](https://correlationdetective.com/) has more of these scenarios, from fMRI and genomics to flash trading and weather sensor networks, plus a [two-minute video introduction](https://www.youtube.com/watch?v=U7z4uyonixk) and an [interactive demo](https://correlationdetective.com/app/) of CDStream on NYSE trade and quote data.
+
 ## Links
 
 - Paper page: [Multivariate correlations discovery in static and streaming data](/publication/cd_conf_2022) (VLDB 2022, [open PDF](https://www.vldb.org/pvldb/vol15/p1266-papapetrou.pdf))
 - Paper page: [Efficient detection of multivariate correlations with different correlation measures](/publication/cd_journal_2024) (The VLDB Journal, 2024, [open access](https://link.springer.com/article/10.1007/s00778-023-00815-y))
-- Library and docs: [correlationdetective.com](https://correlationdetective.com/), [GitHub](https://github.com/CorrelationDetective/library)
+- Project website: [correlationdetective.com](https://correlationdetective.com/), with a [video introduction](https://www.youtube.com/watch?v=U7z4uyonixk), an [interactive demo](https://correlationdetective.com/app/) and more application scenarios
+- Library and docs: [GitHub](https://github.com/CorrelationDetective/library)
 - Talk: [VLDB 2022 presentation in Sydney](/talks/2022-09-09-cd-vldb), with slides and the recording
 
 ## Cite this
