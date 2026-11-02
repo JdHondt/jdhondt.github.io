@@ -1,6 +1,8 @@
 ---
 title: "Beyond pairwise: finding multivariate correlations in large datasets"
-date: 2026-12-01
+date: 2026-11-02
+header:
+  teaser: blog/correlation-detective/stocks-example.png
 permalink: /blog/multivariate-correlations-correlation-detective/
 excerpt: "How Correlation Detective finds groups of three to five correlated time series in large datasets, orders of magnitude faster than brute force."
 tags:
@@ -14,6 +16,11 @@ tags:
 ## Why pairwise correlation misses things
 
 Here is the example that opens our VLDB 2022 paper. Take the daily closing prices of three stocks on the Australian Securities Exchange, MCP, QAN and RDF. Pairwise, none of them look very related: MCP and QAN correlate at 0.46, MCP and RDF at 0.53, and QAN and RDF are negatively correlated at -0.47. But if you add QAN and RDF together, the resulting series tracks MCP with a correlation of 0.96. Looking only at pairs, you would never have found this. The same pattern shows up in fMRI data, where one brain region follows the average activity of two others, and in climate science, where a ternary correlation revealed a new teleconnection pattern.
+
+<figure>
+  <a href="/images/blog/correlation-detective/stocks-example.png" target="_blank" rel="noopener"><img src="/images/blog/correlation-detective/stocks-example.png" alt="Line chart of z-normalized daily closing prices of MCP, QAN, RDF and the sum of QAN and RDF over ten days, next to their correlation matrix. The sum tracks MCP closely (correlation 0.96), while every pairwise correlation is between -0.47 and 0.53." style="width:100%"></a>
+  <figcaption>Three ASX stocks and their correlation matrix. No pair stands out, but QAN plus RDF follows MCP almost exactly. (Figure from the VLDB 2022 paper; click to enlarge.)</figcaption>
+</figure>
 
 The two papers cover two families of multivariate correlation measures.
 
@@ -33,6 +40,11 @@ What makes it worse is that apriori-style pruning, where you drop a group as soo
 
 **Clustering-based search.** Correlation Detective first clusters the vectors hierarchically (top-down K-means++, K around 10, a tree of three to four levels for 1000 vectors). It then enumerates combinations of *clusters* rather than vectors and computes the bounds for each. If the lower bound is above the threshold, every combination inside is an answer and gets added wholesale. If the upper bound is below it, the whole combination is discarded. Only if the threshold falls in between does the algorithm split the largest cluster and recurse. Because correlated vectors tend to land in the same clusters, most decisions happen high up in the tree, and clustering quality only affects speed, never correctness. Two refinements matter in practice: using the actual minimum and maximum pairwise correlations between cluster members instead of the worst-case geometric bounds narrows them by 50 to 90 percent and cuts runtime by about an order of magnitude, and a top-k variant seeds the running threshold with the k-th highest pairwise correlation and prioritizes promising branches. The same prioritization gives a progressive mode that returned around 80 percent of the answers in 10 percent of the time in the 2022 experiments, and over 90 percent in the journal experiments.
 
+<figure>
+  <a href="/images/blog/correlation-detective/cluster-bounds.png" target="_blank" rel="noopener"><img src="/images/blog/correlation-detective/cluster-bounds.png" alt="Left: a three-level cluster tree over eight vectors a to h, with root clusters C1, C2 and C3 split into sub-clusters C4 to C10. Right: three clusters drawn as circles around their centroids, with the closest and farthest possible distances between members of C2 and C3 marked as u and l." style="width:100%"></a>
+  <figcaption>Left: the cluster hierarchy that the search walks down, splitting a cluster only when a combination is indecisive. Right: how the centroid distance and the cluster radii bound the correlation between any two members of C2 and C3. (Figure from the VLDB 2022 paper; click to enlarge.)</figcaption>
+</figure>
+
 **Keeping results fresh on streams.** The bounds of a cluster combination depend on only two pairs of vectors per cluster pair: the ones that determine the minimum and maximum pairwise correlation (the "extrema pairs"). CDStream stores every decisive cluster combination in an index keyed by those pairs. When a new value arrives, the index says which extrema pairs might have changed; if they are still valid, nothing else needs checking. Updates are processed in batches (in the journal version, configurable epochs inside a sliding window, trading freshness for throughput). Because a burst of updates can invalidate so much of the index that recomputing from scratch is cheaper, CDHybrid fits a small online regression on arrival counts and execution times and switches between CDStream and plain CD automatically.
 
 ## Results
@@ -47,8 +59,6 @@ Thresholds and query patterns differ per row, so read across, not down.
 | fMRI (VLDBJ) | 237 and 509 series | Four in-memory DBMS, SQL for PC(1,3) | CD 2.70 s and 16.63 s; DBMS1 168.86 s and 5,138.61 s; the other three timed out at 8 h |
 | Stocks (VLDBJ) | subsets up to 12,800 of 28,678 stocks | Two exhaustive baselines (OPT, UNOPT) | Baselines hit the 8 h limit for all four measures; CD's runtime grows at a much slower rate |
 | Stocks stream (VLDB 2022) | 1,000 stocks, window 2,000 | CD re-run per batch | CDStream needs a few milliseconds per batch for small patterns, about an order of magnitude less than CD |
-
-<!-- FIGURE: Two-panel figure. Left: the MCP/QAN/RDF example from Fig. 1 of the VLDB 2022 paper (three z-normalized price series plus their sum, with the 4x4 correlation matrix as an inset). Right: schematic of the cluster hierarchy with a decisive-positive, decisive-negative and indecisive cluster combination coloured differently, redrawn from Fig. 2b/2c. Use the site's default palette; no logos. -->
 
 ## Running Correlation Detective
 
@@ -107,6 +117,7 @@ Other useful knobs in `RunParameters` are `setMinJump`, `setIrreducibility`, `se
 
 ## Cite this
 
+{% raw %}
 ```bibtex
 @article{minartz2022multivariate,
   author  = {Minartz, Koen and d'Hondt, Jens E. and Papapetrou, Odysseas},
@@ -129,3 +140,4 @@ Other useful knobs in `RunParameters` are `setMinJump`, `setIrreducibility`, `se
   doi     = {10.1007/s00778-023-00815-y}
 }
 ```
+{% endraw %}
